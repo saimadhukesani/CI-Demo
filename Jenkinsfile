@@ -31,7 +31,7 @@ pipeline {
             steps {
                 bat 'docker stop myapp-container || exit 0'
                 bat 'docker rm myapp-container || exit 0'
-                bat 'docker run -d -p 8080:8080 --name myapp-container myapp'
+                bat 'docker run -d -p 8081:8080 --name myapp-container myapp'
             }
         }
 
