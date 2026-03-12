@@ -1,20 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<plugin>
+ <groupId>org.jacoco</groupId>
+ <artifactId>jacoco-maven-plugin</artifactId>
+ <version>0.8.8</version>
 
-<modelVersion>4.0.0</modelVersion>
+ <executions>
+   <execution>
+     <goals>
+       <goal>prepare-agent</goal>
+     </goals>
+   </execution>
 
-<groupId>com.demo</groupId>
-<artifactId>ci-demo</artifactId>
-<version>1.0</version>
+   <execution>
+     <id>report</id>
+     <phase>test</phase>
+     <goals>
+       <goal>report</goal>
+     </goals>
+   </execution>
 
-<dependencies>
-
-<dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>4.13.2</version>
-<scope>test</scope>
-</dependency>
-
-</dependencies>
-
-</project>
+ </executions>
+</plugin>
